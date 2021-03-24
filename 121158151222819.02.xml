@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BillPDFInfo>
+<CountryCode>LB</CountryCode>
+<Currency>USD</Currency>
+<Locale>en-US</Locale>
+<Language>en</Language>
+<PaymentMethod>CREDITCARD</PaymentMethod>
+<InvoiceNumber>E0100DY3C5</InvoiceNumber>
+<SequenceNumber/>
+<OrderId>03b59b6c-9d68-4118-bc11-b286aef6bec2</OrderId>
+<BillingMonth>03/2021</BillingMonth>
+<BillType>OMSDirect</BillType>
+<BoletoUrl/>
+<CustomerPONumber/>
+<DocumentDate>2021-03-24T00:00:00.0000000-07:00</DocumentDate>
+<TaxExemptID/>
+<AccountFirstName>Tarek</AccountFirstName>
+<AccountLastName>Deeb</AccountLastName>
+<Email>commerce_oms_partner_puid@live.com</Email>
+<GSTTaxRate>(0.000%)</GSTTaxRate>
+<TotalAmountExcludingGST>7142.8571</TotalAmountExcludingGST>
+<TotalGSTTax>0</TotalGSTTax>
+<TotalIncludingGST>7142.8571</TotalIncludingGST>
+<SellerTaxId>IE 8256796 U</SellerTaxId>
+<ReverseCharge>false</ReverseCharge>
+<BillToAddress>
+<BillableAcctId>1960705526</BillableAcctId>
+<FirstName>TAREK DEEB</FirstName>
+<LastName/>
+<Company>Vivo Cosmetics Lebanon</Company>
+<Street1>Calle Del Marqués De Urquijo, 43</Street1>
+<Street2>Primero, Izq.</Street2>
+<Street3/>
+<City>Madrid</City>
+<State/>
+<PostalCode>00000000</PostalCode>
+<Country>Lebanon</Country>
+</BillToAddress>
+<SoldToAddress>
+<BillableAcctId>1960705526</BillableAcctId>
+<FirstName>Tarek</FirstName>
+<LastName>Deeb</LastName>
+<Company>Vivo Cosmetics Lebanon</Company>
+<Street1>Moussaitbeh, Mazraa Street, Moussatibeh Garden</Street1>
+<Street2>7th Floor</Street2>
+<Street3/>
+<City>Beirut</City>
+<State>Beirut</State>
+<PostalCode>70171170</PostalCode>
+<Country>Lebanon</Country>
+</SoldToAddress>
+<ShipToAddress>
+<BillableAcctId>1960705526</BillableAcctId>
+<FirstName>Tarek</FirstName>
+<LastName>Deeb</LastName>
+<Company>Vivo Cosmetics Lebanon</Company>
+<Street1>Moussaitbeh, Mazraa Street, Moussatibeh Garden</Street1>
+<Street2>7th Floor</Street2>
+<Street3/>
+<City>Beirut</City>
+<State>Beirut</State>
+<PostalCode>70171170</PostalCode>
+<Country>Lebanon</Country>
+</ShipToAddress>
+<PreviousBalance>5.0000</PreviousBalance>
+<Payments>-5.0000</Payments>
+<PostBillAndARAdjustments>0.0000</PostBillAndARAdjustments>
+<TotalBalancePaymentsAndCredits>0.0000</TotalBalancePaymentsAndCredits>
+<RecurringCharges>5.0000</RecurringCharges>
+<Discounts>0.0000</Discounts>
+<UsageCharges>0.0000</UsageCharges>
+<OtherProductsAndServices>0.0000</OtherProductsAndServices>
+<MiscAdjustments>0.0000</MiscAdjustments>
+<TotalTax>0.0000</TotalTax>
+<TotalRecurringTax>0.0000</TotalRecurringTax>
+<TotalRefundTax>0.0000</TotalRefundTax>
+<TotalPreBillAdjustment>0.0000</TotalPreBillAdjustment>
+<TotalCurrentCharges>5.0000</TotalCurrentCharges>
+<TotalAmountDue>5.0000</TotalAmountDue>
+<CompanyName>Vivo Cosmetics Lebanon</CompanyName>
+<SubscriptionInfoList>
+<SubscriptionInfo>
+<ChargePeriod>
+<SKU>AAA-10619</SKU>
+<Name>Microsoft 365 Business Basic</Name>
+<ServiceStart>2021-03-23T00:00:00.0000000-07:00</ServiceStart>
+<ServiceEnd>2021-04-22T00:00:00.0000000-07:00</ServiceEnd>
+<Discount>0.0000</Discount>
+<Taxes>0.0000</Taxes>
+<Taxes1>0.0000</Taxes1>
+<Taxes2>0.0000</Taxes2>
+<TaxRate>0</TaxRate>
+<Partner/>
+<UnitPrice>5.0000</UnitPrice>
+<InvoiceQuantity>1</InvoiceQuantity>
+<UnitMeasure/>
+<TotalNetAmount>5.0000</TotalNetAmount>
+<TotalAmount>5.0000</TotalAmount>
+<SubscriptionReferenceId>1</SubscriptionReferenceId>
+<OrderId>568860936681421591</OrderId>
+<LineItemId>1</LineItemId>
+</ChargePeriod>
+</SubscriptionInfo>
+</SubscriptionInfoList>
+<SubTotalAmount>5.0000</SubTotalAmount>
+<SubTotalTax>0.0000</SubTotalTax>
+<GrandTotalAmount>5.0000</GrandTotalAmount>
+<GrandTaxRate>0</GrandTaxRate>
+<IsLocalSettlement>false</IsLocalSettlement>
+</BillPDFInfo>
