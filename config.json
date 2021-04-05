@@ -1,0 +1,86 @@
+﻿{
+    "Config":
+    {
+        "ASPort": "5132",
+        "BI_SERVER": "true",
+        "managementUrl": "http://localhost:8083",
+        "rsConfigFilePath": "..\\ReportServer\\rsreportserver.config",
+        "SecureConnectionLevel": "0"
+    },
+    "ManagementProcess": {
+        "name": "Management Service",
+        "path": "Management\\RSManagement.exe",
+        "parameters": "",
+        "Config": {
+            "Logger.path": "..\\LogFiles\\",
+            "Dumper.path": "..\\LogFiles\\",
+            "Dumper.flags": "SendToWatson, AllThreads, AllMemory",
+            "Dumper.preventIfContains": "Microsoft.BIServer.HostingEnvironment.Exceptions.TrustedProcessTokenExpiredException",
+            "listenerUrl": "http://+:8083/",
+            "restartOnChangesTo": "Dumper.flags,Dumper.path,Dumper.preventIfContains,listenerUrl,Logger.path"
+        }
+    },
+    "ManagedProcesses":
+    [
+        {
+            "name": "RS Service",
+            "path": "ReportServer\\bin\\ReportingServicesService.exe",
+            "aspSettingsFile": "ReportServer\\web.config",
+            "policySettingsFile": "ReportServer\\rssrvpolicy.config",
+            "parameters": "/app",
+            "Config":
+            {
+                "restartOnChangesTo": "Hosting-databaseValidationStatus,SecureConnectionLevel,SupportedHyperlinkSchemes"
+            }
+        },
+        {
+            "name": "Portal",
+            "path": "Portal\\RSPortal.exe",
+            "aspSettingsFile": "Portal\\RSPortal.exe.config",
+            "parameters": "/app",
+            "Config":
+            {
+                "restartOnChangesTo": "Hosting-databaseValidationStatus,SecureConnectionLevel,AccessControlAllowOrigin,AccessControlAllowHeaders,AccessControlAllowMethods,AccessControlAllowCredentials,AccessControlMaxAge,AccessControlExposeHeaders,CustomHeaders"
+            }
+        },
+        {
+            "name": "PowerBI",
+            "path": "PowerBI\\RSPowerBI.exe",
+            "aspSettingsFile": "PowerBI\\RSPowerBI.exe.config",
+            "parameters": "",
+            "Config":
+            {
+                "Logger.path": "..\\LogFiles\\",
+                "managementUrl":  "http://localhost:8083",
+                "Dumper.path": "..\\LogFiles\\",
+                "Dumper.flags": "SendToWatson, AllThreads, AllMemory",
+                "Dumper.preventIfContains": "Microsoft.PowerBI.ReportServer.WebApi.Catalog.CatalogAccessException,System.Threading.ThreadAbortException,System.OutOfMemoryException,System.ObjectDisposedException,System.IO.IOException,System.IO.FileLoadException,System.AppDomainUnloadedException,System.Net.Http.HttpRequestException,System.Net.HttpListenerException,System.OperationCanceledException,System.InvalidOperationException",
+                "restartOnChangesTo": "Hosting-databaseValidationStatus,ASPort,Dumper.flags,Dumper.path,Dumper.preventIfContains,EnableCustomVisuals,EnablePowerBIReportExportData,EnablePowerBIReportExportUnderlyingData,Logger.level,Logger.path,ModelCleanupCycleMinutes,managementUrl,ModelExpirationMinutes,SecureConnectionLevel,CustomHeaders"
+            }
+        },
+        {
+            "name": "Office",
+            "path": "Office\\RSOffice.exe",
+            "aspSettingsFile": "Office\\RSOffice.exe.config",
+            "parameters": "/app",
+            "Config":
+            {
+                "Dumper.path": "..\\LogFiles\\",
+                "Dumper.flags": "SendToWatson, AllThreads, AllMemory",
+                "Dumper.preventIfContains": "System.Threading.ThreadAbortException,System.OutOfMemoryException,System.ObjectDisposedException,System.IO.IOException,System.IO.FileLoadException,System.AppDomainUnloadedException,System.Net.Http.HttpRequestException,System.Net.HttpListenerException",
+                "restartOnChangesTo": "Hosting-databaseValidationStatus,Dumper.flags,Dumper.path,Dumper.preventIfContains,OfficeOnlineDiscoveryUrl,OfficeAccessTokenExpirationSeconds,CustomHeaders"
+            }
+        },
+        {
+            "name": "AS",
+            "launcher":"AnalysisServices",
+            "path": "ASEngine\\msmdsrv.exe",
+            "Config":
+            {
+                "Logger.path": "LogFiles\\",
+                "Workspaces.path": "ASEngine\\workspaces",
+                "restartOnChangesTo": "ASPort,Logger.path,Workspaces.path"
+            }
+        },
+    ]
+}
